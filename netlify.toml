@@ -1,0 +1,13 @@
+[dev]
+	publish = "site/test/"
+	functions = "functions/"
+	command = "hugo server -ws site -d test"
+	framework = "#custom"
+	targetPort = 1313 # The port for your application server, framework or site generator
+	port = 8888
+
+[context.production]
+	environment = { HUGO_VERSION = "0.80.0" }
+
+[context.branch-deploy]
+	environment = { HUGO_VERSION = "0.80.0" }
